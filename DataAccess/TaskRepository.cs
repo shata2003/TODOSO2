@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ using System.Collections.Generic;
 using System.Linq;
 using NTierTodoApp.Models;
 
@@ -28,11 +28,15 @@ namespace NTierTodoApp.DataAccess
         }
 
         // TODO: تنفيذ دالة حذف المهمة
-        public void Delete(int id)
-        {
-            // TODO: ابحث عن المهمة باستخدام id
-
-            // TODO: إذا كانت المهمة موجودة، قم بإزالتها من القائمة
-        }
+// ...existing code...
+public void DeleteTask(int id)
+{
+    var task = _tasks.FirstOrDefault(t => t.Id == id);
+    if (task != null)
+    {
+        _tasks.Remove(task);
+    }
+}
+// ...existing code...  }
     }
 }

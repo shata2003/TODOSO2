@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using NTierTodoApp.DataAccess;
 using NTierTodoApp.Models;
@@ -37,9 +38,9 @@ namespace NTierTodoApp.Business
         }
 
         // TODO: تنفيذ دالة حذف المهمة
-        public void DeleteTask(int id)
-        {
-            // TODO: استدعاء دالة الحذف في طبقة DataAccess
-        }
+public void DeleteTask(int id)
+{
+    _taskRepository.DeleteTask(id);
+}
     }
 }
